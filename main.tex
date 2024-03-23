@@ -1,0 +1,213 @@
+\documentclass{ximera}
+
+\title{Questionário para Analistas}
+\author{Rodolfo Labiapari Mansur Guimarães}
+
+\begin{document}
+\begin{abstract}
+    %This is a Ximera document.
+\end{abstract}
+\maketitle
+\begin{example}
+Onde ficam, por padrão, as senhas de usuários em sistemas Linux modernos?
+\begin{explanation}
+Ficam situadas no diretório \texttt{/etc/passwd} e também em \texttt{/etc/shadow}.
+\end{explanation}
+\end{example}
+
+
+\begin{example}
+Como inicializar um daemon de ssh em um sistema linux ( cite como e qual
+distribuição).
+\begin{explanation}
+No Ubuntu, eu utilizaria o comando \textt{sshd user@10.0.0.1} para inicializar uma deamon em um sistema remoto por exemplo.
+\end{explanation}
+\end{example}
+
+
+\begin{example}
+Como posso ver a tabela de partição de um disco numa máquina linux?
+\begin{explanation}
+Se o sistema possuir um UI, utilizaria o GParted para visualização.
+Caso contrário, utilizaria o comando \textt{fdisk -l} para visualizar em linha de comando.
+\end{explanation}
+\end{example}
+
+
+\begin{example}
+O que são bash, ksh, sh, csh?
+\begin{explanation}
+São interpretadores de linha de comando.
+Lembro ainda que bash e ksh são derivados do sh e csh é original do BSD.
+\end{explanation}
+\end{example}
+
+
+\begin{example}
+Como atribuir uma variável de ambiente no shell bash?
+\begin{explanation}
+Utiliza-se o simbolo = para atribuição de valores. Como por exemplo:
+\texttt{VERSION=4.0.1}
+\end{explanation}
+\end{example}
+
+
+\begin{example}
+Qual a saída do script abaixo?
+\begin{verbatim}
+cd /tmp
+if [ `ls` ] ;then
+echo “vazio”
+else
+echo “cheio”
+fi
+\end{verbatim}
+\begin{explanation}
+Este script sempre retornará \texttt{vazio} quando houver 1 ou mais arquivos no diretório e \texttt{cheio} sempre que estiver vazio.
+\end{explanation}
+\end{example}
+
+
+\begin{example}
+Como listar as portas abertas e conexões ativas num sistema linux genérico?
+\begin{explanation}
+\end{explanation}
+\end{example}
+
+
+\begin{example}
+Para que servem os protocolos SMTP, POP3 e IMAP? Defina propriedades de cada um
+\begin{explanation}
+Servem para clientes e servidores realizarem atualizações e envios de e-mails.
+\begin{description}
+    \item[SMTP:] Protocolo para envio de mensagens de e-mail;
+    \item[POP3:] Protocolo para receber as mensagens de e-mail salvando-as no cliente;
+    \item[IMAP:] Não tenho certeza mas sincroniza as mensagens e status tanto no servidor no cliente.
+\end{description}
+\end{explanation}
+\end{example}
+
+
+\begin{example}
+Como listar as rotas correntes em um sistema linux genérico?
+\begin{explanation}
+Conheço duas opções, sendo elas o comando \texttt{route} e também o comando \texttt{netstat}. Cada um com seus próprios argumentos específicos para exibição.
+\end{explanation}
+\end{example}
+
+
+\begin{example}
+Em relação a Firewall Iptables qual a função de cada uma das tabelas FILTER, NAT e MANGLE.
+\begin{explanation}
+
+\begin{description}
+    \item[FILTER:] Regras que são executadas no recebimento do pacote, como aceitação e descarte;
+    \item[NAT:] Regras que podem ser entendidas como tradutores de pacotes podendo realizar manuseios como desvios por exemplos;
+    \item[MANGLE:] Regras que realizam ações de acordo com o pacote recebido.
+\end{description}
+\end{explanation}
+\end{example}
+
+
+\begin{example}
+O que é VPN? Descreva três protocolos ou produtos de VPN utilizados atualmente.
+\begin{explanation}
+VPN é um protocolo para acesso à equipamentos e redes passando por um meio não seguro criando um túnel criptografado.
+Um exemplo é o protocolo SSH.
+\end{explanation}
+\end{example}
+
+
+\begin{example}
+Em virtualização, defina os conceitos de hipervisor e máquina virtual.
+\begin{explanation}
+\end{explanation}
+\end{example}
+
+
+\begin{example}
+Temos um web server responsável por diversos websites cujo acesso é feito por diversos domínios diferentes,
+como por exemplo www.dominio1.com e www.dominio2.com.br. Utilizando  o Webserver Nginx, como seria feita esta configuração? Descreva.
+\begin{explanation}
+\end{explanation}
+\end{example}
+
+
+\begin{example}
+Oque são EC2, IAM, RDS, Route53 e S3 ?
+\begin{explanation}
+\end{explanation}
+\end{example}
+
+
+\begin{example}
+Um cliente precisa conectar sua rede local diretamente com a rede de servidores que estão hospedados na Aws. Quais métodos podemos utilizar para fazer esse comunicação entre as redes ?
+\begin{explanation}
+\end{explanation}
+\end{example}
+
+
+\begin{example}
+Oque é um CDN ? Como funciona um CDN ?
+\begin{explanation}
+\end{explanation}
+\end{example}
+
+
+\begin{example}
+Oque é Docker containers ?
+\begin{explanation}
+\end{explanation}
+\end{example}
+
+
+\begin{example}
+Descreva a funcionalidade dos seguintes componentes de um cluster Kubernetes
+-ETCD
+-API Server
+-Controller Manager
+-Scheduler
+-Kubelet
+-Kube-Proxy
+\begin{explanation}
+\end{explanation}
+\end{example}
+
+
+\begin{example}
+Explique sucintamente os seguintes objetos em um cluster Kubernetes
+-Pod
+-Deployment
+-Service
+-Ingress
+-DaemonSet
+-Job
+\begin{explanation}
+\end{explanation}
+\end{example}
+
+
+\begin{example}
+Descreva sucintamente o que é rede de pods, rede de serviços e sua relação com deployments e services
+\begin{explanation}
+\end{explanation}
+\end{example}
+
+\begin{problem}
+Here is a multiple choice problem.
+\begin{multipleChoice}
+\choice[correct]{I'm right!}
+\choice{I'm not right}
+\end{multipleChoice}
+\end{problem}
+
+\begin{exercise}
+\begin{selectAll}
+\choice[correct]{Select me.}
+\choice[correct]{Me too!}
+\choice{Not me.}
+\end{selectAll}
+\end{exercise}
+
+
+\end{document}
